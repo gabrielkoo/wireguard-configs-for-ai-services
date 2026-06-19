@@ -1,0 +1,32 @@
+{
+  "service": "claude",
+  "application": "Claude",
+  "source": "cloudflare-resource-library",
+  "resolver": "1.1.1.1-doh",
+  "updated": "2026-06-19T03:05:46Z",
+  "hostnames": [
+    "a-api.anthropic.com",
+    "a-cdn.anthropic.com",
+    "anthropic.com",
+    "claude.ai",
+    "claude.com"
+  ],
+  "ipv4": [
+    "13.35.0.0/16",
+    "34.36.57.0/24",
+    "160.79.104.0/21"
+  ],
+  "ipv6": [
+    "2600:9000:2079::/48",
+    "2607:6bc0::/32"
+  ],
+  "raw": {
+    "ipv4": [
+      "34.36.57.103",
+      "160.79.104.10"
+    ],
+    "ipv6": [
+      "2607:6bc0::10"
+    ]
+  }
+}
