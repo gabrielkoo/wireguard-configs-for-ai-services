@@ -49,11 +49,14 @@ SERVICES = {
 STATIC = {
     "openai": {"ipv4": [], "ipv6": []},
     "claude": {
-        # 160.79.104.0/21 = Anthropic Inc. AS399230 (api/claude.ai core)
-        # 13.35.0.0/16    = AWS CloudFront (assets.anthropic.com)
-        "ipv4": ["160.79.104.0/21", "13.35.0.0/16"],
-        # 2607:6bc0::/32 = Anthropic v6 ; 2600:9000:2079::/48 = CloudFront v6
-        "ipv6": ["2607:6bc0::/32", "2600:9000:2079::/48"],
+        # 160.79.104.0/21 = Anthropic Inc. AS399230 (api/claude.ai core).
+        # Resolved GCLB front-ends (34.36.x) are picked up dynamically each run.
+        # NOTE: assets.anthropic.com used to sit on AWS CloudFront (13.35.0.0/16),
+        # but it no longer resolves there and a /16 CloudFront block is far too
+        # broad for a split tunnel, so it is intentionally dropped.
+        "ipv4": ["160.79.104.0/21"],
+        # 2607:6bc0::/32 = Anthropic v6.
+        "ipv6": ["2607:6bc0::/32"],
     },
 }
 
