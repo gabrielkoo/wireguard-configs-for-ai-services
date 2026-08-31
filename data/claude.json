@@ -3,13 +3,14 @@
   "application": "Claude",
   "source": "cloudflare-resource-library",
   "resolver": "1.1.1.1-doh",
-  "updated": "2026-06-19T03:15:16Z",
+  "updated": "2026-08-31T09:50:35Z",
   "hostnames": [
     "a-api.anthropic.com",
     "a-cdn.anthropic.com",
     "anthropic.com",
     "claude.ai",
-    "claude.com"
+    "claude.com",
+    "claudeusercontent.com"
   ],
   "ipv4": [
     "34.36.57.0/24",
